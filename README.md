@@ -3,5 +3,5 @@
 ## install
 
 ```bash
-    composer require ultraware/roles
+    composer require jlzan1314/swoft-entity
 ```
