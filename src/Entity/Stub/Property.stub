@@ -1,0 +1,7 @@
+    /**
+{{comment}}
+{{@Id}}
+     * @Column(name="{{property}}",prop="{{aliasProperty}}")
+{{@Required}}
+     */
+    private ${{aliasProperty}}{{hasDefault}}

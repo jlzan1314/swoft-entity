@@ -1,0 +1,13 @@
+<?php
+namespace {{namespace}};
+
+{{uses}}
+/**
+{{entityName}}
+ * @Entity(table="{{entity}}"{{instance}})
+ * @uses      {{entityClass}}
+ * {{entityDate}}
+ */
+class {{entityClass}} extends {{extends}}
+{{{property}}{{setter}}{{getter}}
+}
