@@ -8,7 +8,7 @@
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
 
-namespace Swoft\Db\Entity;
+namespace Swoft\Entity\Entity;
 
 use Swoft\Stdlib\Helper\StringHelper;
 

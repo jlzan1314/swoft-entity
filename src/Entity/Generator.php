@@ -7,7 +7,7 @@
  * @contact  group@swoft.org
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
-namespace Swoft\Db\Entity;
+namespace Swoft\Entity\Entity;
 
 class Generator extends AbstractGenerator implements GeneratorInterface
 {

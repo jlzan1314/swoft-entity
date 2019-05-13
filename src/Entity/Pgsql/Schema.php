@@ -1,13 +1,13 @@
 <?php
 
-namespace Swoft\Db\Entity\Pgsql;
+namespace Swoft\Entity\Entity\Pgsql;
 
-use Swoft\Db\Entity\Types;
+use Swoft\Entity\Entity\Types;
 
 /**
  * Schema
  */
-class Schema extends \Swoft\Db\Entity\Schema
+class Schema extends \Swoft\Entity\Entity\Schema
 {
     public $typeMap = [
             'bit'                         => self::TYPE_INTEGER,

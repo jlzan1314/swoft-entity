@@ -7,13 +7,11 @@
  * @contact  group@swoft.org
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
-namespace Swoft\Db\Command;
+namespace Swoft\Entity\Command;
 
-use Swoft\App;
 use Swoft\Bean\BeanFactory;
-use Swoft\Db\Entity\Generator;
-use Swoft\Db\Entity\Mysql\Schema;
-use Swoft\Db\Helper\DbHelper;
+use Swoft\Entity\Entity\Generator;
+use Swoft\Entity\Entity\Mysql\Schema;
 use Swoft\Db\Pool;
 use Swoft\Db\Pool\DbPool;
 

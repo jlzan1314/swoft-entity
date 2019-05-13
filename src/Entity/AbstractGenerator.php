@@ -7,7 +7,7 @@
  * @contact  group@swoft.org
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
-namespace Swoft\Db\Entity;
+namespace Swoft\Entity\Entity;
 
 use Swoft\Stdlib\Helper\StringHelper;
 use Swoft\Connection\Pool\Contract\ConnectionInterface;
@@ -23,7 +23,7 @@ abstract class AbstractGenerator
         'Swoft\Db\Annotation\Mapping\Column',
         'Swoft\Db\Annotation\Mapping\Entity',
         'Swoft\Db\Annotation\Mapping\Id',
-        'Swoft\Db\Entity\Types'
+        'Swoft\Entity\Entity\Types'
     ];
 
     /**

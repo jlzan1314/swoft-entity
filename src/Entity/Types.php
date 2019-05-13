@@ -6,7 +6,7 @@
  * Time: 10:21
  */
 
-namespace Swoft\Db\Entity;
+namespace Swoft\Entity\Entity;
 /**
  * PHP types
  */

@@ -8,14 +8,14 @@
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
 
-namespace Swoft\Db\Entity\Mysql;
+namespace Swoft\Entity\Entity\Mysql;
 
-use Swoft\Db\Entity\Types;
+use Swoft\Entity\Entity\Types;
 
 /**
  * Schema
  */
-class Schema extends \Swoft\Db\Entity\Schema
+class Schema extends \Swoft\Entity\Entity\Schema
 {
     /**
      * @var array

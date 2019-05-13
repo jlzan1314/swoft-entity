@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Swoft\Db;
+namespace Swoft\Entity;
 
 use Swoft\SwoftComponent;
 
