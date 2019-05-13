@@ -108,8 +108,34 @@ class Generator extends AbstractGenerator implements GeneratorInterface
         $where = !empty($where) ? ' WHERE ' . implode(' AND ', $where) : null;
 
         $querySql = "SELECT `TABLE_NAME` AS `name`,`TABLE_COMMENT` as `comment` FROM {$schemaTable} {$where}";
-        $this->tables = $this->dbHandler->select($querySql);
+        $this->tables = $this->querySql($querySql);
         return !empty($this->tables) ? $this->tables : [];
+    }
+
+	/**
+	 * 兼容'fetchMode'=>\PDO::FETCH_ASSOC
+	 * @param string $sql
+	 * @return array
+	 * @throws \ReflectionException
+	 * @throws \Swoft\Bean\Exception\ContainerException
+	 * @throws \Swoft\Db\Exception\QueryException
+	 */
+    public function querySql(string $sql):array{
+	    $return=[];
+	    $data=$this->dbHandler->select($sql);
+	    if (!$data) {
+		    return $return;
+    	}
+	    if (is_array($data)) {
+		    foreach ($data as $obj){
+			    if (is_array($obj)) {
+				    return $data;
+				}else{
+				    $return[]=get_object_vars($obj);
+			    }
+		    }
+    	}
+    	return $return;
     }
 
     /**
@@ -128,7 +154,7 @@ class Generator extends AbstractGenerator implements GeneratorInterface
         $where   = !empty($where) ? ' WHERE ' . implode(' AND ', $where) : null;
 
         $querySql = "SELECT `COLUMN_NAME` as `name`,`DATA_TYPE` as `type`,`CHARACTER_MAXIMUM_LENGTH` as `length`,`COLUMN_DEFAULT` as `default` ,`COLUMN_KEY` as `key`,`IS_NULLABLE` as `nullable`,`COLUMN_TYPE` as `column_type`,`COLUMN_COMMENT` as `column_comment` FROM {$schemaTable} {$where}";
-        $columns = $this->dbHandler->select($querySql);
+        $columns = $this->querySql($querySql);
 
         return !empty($columns) ? $columns : [];
     }

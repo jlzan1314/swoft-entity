@@ -132,7 +132,10 @@ class EntityCommand
     private function parseDatabaseCommand(string &$database)
     {
         if (input()->hasSOpt('d') || input()->hasLOpt('database')) {
-            $database = (string)\input()->getSameOpt(['d', 'database']);
+	        $database = \input()->getSameOpt(['d', 'database']);
+	        if (!is_string($database)) {
+		        $database=null;
+	        }
         }
     }
 
