@@ -3,11 +3,7 @@
 ## install
 
 ```bash
-    composer require jlzan1314/swoft-entity
-```
-
-## doc
-Auto create entity by table structure
+composer require jlzan1314/swoft-entity
 
 entity:create -d[|--database] <database> --instance <instance>
 entity:create -d[|--database] <database> [table] -instnace <instnace>
@@ -28,6 +24,7 @@ entity:create -d[|--database] <database> --i[|--include] <table1,table2> -e[|--e
 --instance 设置数据库实例，默认default
 --extends 设置模型的实体基类
 -f 强制覆盖实体文件  
+```
 
 ## use
 ./bin/swoft entity:create -d [database] -f
