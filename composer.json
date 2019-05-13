@@ -1,6 +1,10 @@
 {
     "name": "jlzan1314/swoft-entity",
     "description": "swoft 2.0 entity creater",
+    "keywords": [
+        "swoft 2",
+        "entity"
+    ],
     "authors": [
         {
             "name": "jlzan1314"
