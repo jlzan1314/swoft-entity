@@ -21,7 +21,7 @@ use Swoft\Console\Annotation\Mapping\CommandMapping;
 /**
  * create database entity
  *
- * @Command(name="entity",coroutine=false)
+ * @Command(name="entity",coroutine=true)
  */
 class EntityCommand
 {
